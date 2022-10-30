@@ -3,71 +3,122 @@
   <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="DnD, dnd, dungeons and dragons, d&d, D&D, dnd encounter, 5e, encounter creator, encounter generator">
-    <meta name="description" content="Create monster encounters based on CR, select monsters to add to your list, randomly select monsters by CR">
+    <meta name="description" content="Create monster encounters based on CR, select monsters to add to your list, or create your own monsters">
     <link rel="stylesheet" href="style.css" />
     <title>DnD Encounter Creator</title>
+    <style>
+      body {
+        background-image: url('https://www.teahub.io/photos/full/173-1734356_1920x1080-red-black-circular-gradient-destop-wallpaper-black.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      </style>
   </head>
   <body>
-
     <div id="header">
-      <img src="https://cdn.pixabay.com/photo/2017/08/31/04/01/d20-2699387_1280.png",
-        width="300",
-        height="300"
-        alt="D20 Logo">
-      <h1>DnD Encounter Creator</h1>
+      <h1 style="display: inline"> <img style="display: inline" src="https://cdn.pixabay.com/photo/2017/08/31/04/01/d20-2699387_1280.png",
+        width="120",
+        height="120"
+        alt="Logo of a 20 sided die">
+        D&D<br>Encounter Creator</h1>
     </div>
 
-    <hr>
+      <hr>
 
-    <div id="searchMenu">
-      <label for="challengeRating">Choose a Challenge Rating (<strong>CR</strong>):</label>
-      <select name="challengeRating" id="challengeRating">
-        <option value="CR0">CR<strong>0</option>
-        <option value="CR1/8">CR<strong>1/8</option>
-        <option value="CR1/4">CR<strong>1/4</option>
-        <option value="CR1/2">CR<strong>1/2</option>
-        <option value="CR1" selected>CR<strong>1</option>
-        <option value="CR2">CR2</option>
-        <option value="CR3">CR3</option>
-        <option value="CR4">CR4</option>
-        <option value="CR5">CR5</option>
-        <option value="CR6">CR6</option>
-        <option value="CR7">CR7</option>
-        <option value="CR8">CR8</option>
-        <option value="CR9">CR9</option>
-        <option value="CR10">CR10</option>
-        <option value="CR11">CR11</option>
-        <option value="CR12">CR12</option>
-        <option value="CR13">CR13</option>
-        <option value="CR14">CR14</option>
-        <option value="CR15">CR15</option>
-        <option value="CR16">CR16</option>
-        <option value="CR17">CR17</option>
-        <option value="CR18">CR18</option>
-        <option value="CR19">CR19</option>
-        <option value="CR20">CR20</option>
-        <option value="CR21">CR21</option>
-        <option value="CR22">CR22</option>
-        <option value="CR23">CR23</option>
-        <option value="CR24">CR24</option>
-        <option value="CR30">CR30</option>
-      </select>
-      <button name="searchButton" type="button">Search</button>
-      <button name="randomButton" type="button">Random</button>
+    <div class="gridContainer">
+      <div class="gridChild1" id="searchMenu">
+        <br>
+        <label for="challengeRating">Search by Challenge Rating (<strong>CR</strong>):</label>
+        <select name="challengeRating" id="challengeRating">
+          <option value="CR0">CR0</option>
+          <option value="CR1/8">CR1/8</option>
+          <option value="CR1/4">CR1/4</option>
+          <option value="CR1/2">CR1/2</option>
+          <option value="CR1" selected>CR1</option>
+          <option value="CR2">CR2</option>
+          <option value="CR3">CR3</option>
+          <option value="CR4">CR4</option>
+          <option value="CR5">CR5</option>
+          <option value="CR6">CR6</option>
+          <option value="CR7">CR7</option>
+          <option value="CR8">CR8</option>
+          <option value="CR9">CR9</option>
+          <option value="CR10">CR10</option>
+          <option value="CR11">CR11</option>
+          <option value="CR12">CR12</option>
+          <option value="CR13">CR13</option>
+          <option value="CR14">CR14</option>
+          <option value="CR15">CR15</option>
+          <option value="CR16">CR16</option>
+          <option value="CR17">CR17</option>
+          <option value="CR18">CR18</option>
+          <option value="CR19">CR19</option>
+          <option value="CR20">CR20</option>
+          <option value="CR21">CR21</option>
+          <option value="CR22">CR22</option>
+          <option value="CR23">CR23</option>
+          <option value="CR24">CR24</option>
+          <option value="CR30">CR30</option>
+        </select>
+        <button name="searchButton" type="button">Search</button>
+        <ul id="monsterIconList" class="icons">
+
+        </ul>
+        <p class="searchAdvice">Click on a monster icon to add it to your encounter list</p>
+      </div>
+
+      <div class="gridChild2" id="monsterCreationForm">
+        <form>
+          <p class="createAdvice">Add your own creation to the list</p>
+          <label for="name">Monster name:</label>
+          <input type="text" id="name" name="name" placeholder="Name">
+
+          <br>
+
+          <label for="AC">Monster armor class:</label>
+          <input type="number" id="AC" name="AC" placeholder="AC">
+
+          <br>
+
+          <label for="size">Monster size:</label>
+          <select name="size" id="size">
+            <option value="tiny">Tiny</option>
+            <option value="small">Small</option>
+            <option value="medium"selected>Medium</option>
+            <option value="large">Large</option>
+            <option value="huge">Huge</option>
+            <option value="gargantuan">Gargantuan</option>
+          </select>
+
+          <br>
+
+          <label for="type">Monster type:</label>
+          <input type="text" id="type" name="type" placeholder="Type">
+
+          <br>
+
+          <label for="Name">Monster hit points:</label>
+          <input type="number" id="Name" name="Name" placeholder="HP">
+
+          <br>
+
+          <label for="CR">Monster challenge rating:</label>
+          <input type="number" id="CR" name="CR" placeholder="CR">
+
+          <br>
+          <br>
+
+          <input type="submit" value="submit">
+          <br><br>
+        </form>
+      </div>
+
+      <div class= gridChild3 id="encounterList">
+        <h2>My Encounter List</h2>
+        <h3><strong>Total CR:</strong></h3>
+      </div>
     </div>
-
-    <hr>
-
-    <div id="resultsList">
-      <p>Click on a monster to add it to the encounter list</p>
-    </div>
-
-    <hr>
-
-    <div id="encounterList">
-      <h2>My Encounter List</h2>
-    </div>
-
     <script src="script.js"></script>
   </body>
 </html>
