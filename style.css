@@ -57,7 +57,6 @@ h3{
 }
 
 .card {
-  border-bottom: 3px solid black;
   color:black;
   font-weight: bold;
   font-size: smaller;
@@ -65,3 +64,6 @@ h3{
   line-height: 50%
 }
 
+ul {
+  list-style: none;
+}

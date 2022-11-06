@@ -31,35 +31,36 @@
         <br>
         <label for="challengeRating">Search by Challenge Rating (<strong>CR</strong>):</label>
         <select name="challengeRating" id="challengeRating">
-          <option value="CR0">CR0</option>
-          <option value="CR1" selected>CR1</option>
-          <option value="CR2">CR2</option>
-          <option value="CR3">CR3</option>
-          <option value="CR4">CR4</option>
-          <option value="CR5">CR5</option>
-          <option value="CR6">CR6</option>
-          <option value="CR7">CR7</option>
-          <option value="CR8">CR8</option>
-          <option value="CR9">CR9</option>
-          <option value="CR10">CR10</option>
-          <option value="CR11">CR11</option>
-          <option value="CR12">CR12</option>
-          <option value="CR13">CR13</option>
-          <option value="CR14">CR14</option>
-          <option value="CR15">CR15</option>
-          <option value="CR16">CR16</option>
-          <option value="CR17">CR17</option>
-          <option value="CR18">CR18</option>
-          <option value="CR19">CR19</option>
-          <option value="CR20">CR20</option>
-          <option value="CR21">CR21</option>
-          <option value="CR22">CR22</option>
-          <option value="CR23">CR23</option>
-          <option value="CR24">CR24</option>
-          <option value="CR30">CR30</option>
+          <option value="0">CR0</option>
+          <option value="1" selected>CR1</option>
+          <option value="2">CR2</option>
+          <option value="3">CR3</option>
+          <option value="4">CR4</option>
+          <option value="5">CR5</option>
+          <option value="6">CR6</option>
+          <option value="7">CR7</option>
+          <option value="8">CR8</option>
+          <option value="9">CR9</option>
+          <option value="10">CR10</option>
+          <option value="11">CR11</option>
+          <option value="12">CR12</option>
+          <option value="13">CR13</option>
+          <option value="14">CR14</option>
+          <option value="15">CR15</option>
+          <option value="16">CR16</option>
+          <option value="17">CR17</option>
+          <option value="18">CR18</option>
+          <option value="19">CR19</option>
+          <option value="20">CR20</option>
+          <option value="21">CR21</option>
+          <option value="22">CR22</option>
+          <option value="23">CR23</option>
+          <option value="24">CR24</option>
+          <option value="30">CR30</option>
         </select>
         <button id="searchButton" type="button">Search</button>
-        <p class="searchAdvice">Click on a monster icon to add it to your encounter list</p>
+        <p class="searchAdvice">Click on a monster to add it to your encounter list</p>
+        <hr>
         <ul id="monsterIconList" >
         </ul>
         
@@ -68,44 +69,52 @@
       <div class="gridChild2" id="monsterCreationForm">
         <form id="creationForm">
           <p class="createAdvice">Add your own creation to the list</p>
-          <label for="image">Image:</label>
+          <hr>
+          <label for="image">Image</label>
+          <br>
           <input type="text" id="image" name="image" placeholder="Image URL">
 
           <br>
           
-          <label for="name">Monster name:</label>
+          <label for="name">Monster name</label>
+          <br>
           <input type="text" id="name" name="name" placeholder="Name">
 
           <br>
 
-          <label for="AC">Monster armor class:</label>
+          <label for="AC">Monster armor class</label>
+          <br>
           <input type="number" id="AC" name="AC" placeholder="AC">
 
           <br>
 
-          <label for="size">Monster size:</label>
+          <label for="size">Monster size</label>
+          <br>
           <select name="size" id="size">
-            <option value="tiny">Tiny</option>
-            <option value="small">Small</option>
-            <option value="medium"selected>Medium</option>
-            <option value="large">Large</option>
-            <option value="huge">Huge</option>
-            <option value="gargantuan">Gargantuan</option>
+            <option value="Tiny">Tiny</option>
+            <option value="Small">Small</option>
+            <option value="Medium"selected>Medium</option>
+            <option value="Large">Large</option>
+            <option value="Huge">Huge</option>
+            <option value="Gargantuan">Gargantuan</option>
           </select>
 
           <br>
 
-          <label for="type">Monster type:</label>
+          <label for="type">Monster type</label>
+          <br>
           <input type="text" id="type" name="type" placeholder="Type">
 
           <br>
 
-          <label for="HP">Monster hit points:</label>
+          <label for="HP">Monster hit points</label>
+          <br>
           <input type="number" id="HP" name="Name" placeholder="HP">
 
           <br>
 
-          <label for="CR">Monster challenge rating:</label>
+          <label for="CR">Monster challenge rating</label>
+          <br>
           <input type="number" id="CR" name="CR" placeholder="CR">
 
           <br>
@@ -118,10 +127,9 @@
 
       <div class= gridChild3 id="encounterList">
         <h2>My Encounter List</h2>
+        <hr>
         <div id="myEncounterList">
-
         </div>
-        <h3><strong>Total CR:</strong></h3>
       </div>
     </div>
     <script src="script.js"></script>
