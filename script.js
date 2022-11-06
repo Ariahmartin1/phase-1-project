@@ -1,18 +1,25 @@
 
-function renderOneMonster () {
-    // create a li element with the class of icon (to be stylized in css under .icon)
-    // create div with class content containing a p tag with the monster name
-    let icon = document.createElement('li')
-    li.className = "icon"
 
+function renderOneMonsterIcon (monster) {
+  let icon = document.createElement('li')
+  icon.className = "icon"
+  icon.innerHTML = `
+  <div class="content">
+    <h4>${monster.name}</h4>  
+  `
+  document.getElementById("monsterIconList").appendChild(icon)
 }
 
-function getMonsters() {
-fetch("https://www.dnd5eapi.co/api/monsters")
+function getMonsters () {
+fetch("http://localhost:3000/monsterData")
 .then(res => res.json())
-.then(monsterData => monsterData.forEach(monster => renderOneMonster(monster)))
+.then(monsterData => monsterData.forEach(monster => renderOneMonsterIcon(monster)))
 }
 
-document.querySelector("#searchButton").addEventListener("click", getMonsters)
+document.getElementById('searchButton').addEventListener("click", getMonsters)
+
+document.getElementById('creeationForm').addEventListener("submit", )
+
+
 
 

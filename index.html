@@ -32,9 +32,6 @@
         <label for="challengeRating">Search by Challenge Rating (<strong>CR</strong>):</label>
         <select name="challengeRating" id="challengeRating">
           <option value="CR0">CR0</option>
-          <option value="CR1/8">CR1/8</option>
-          <option value="CR1/4">CR1/4</option>
-          <option value="CR1/2">CR1/2</option>
           <option value="CR1" selected>CR1</option>
           <option value="CR2">CR2</option>
           <option value="CR3">CR3</option>
@@ -61,15 +58,15 @@
           <option value="CR24">CR24</option>
           <option value="CR30">CR30</option>
         </select>
-        <button name="searchButton" type="button">Search</button>
-        <ul id="monsterIconList" class="icons">
-
-        </ul>
+        <button id="searchButton" type="button">Search</button>
         <p class="searchAdvice">Click on a monster icon to add it to your encounter list</p>
+        <ul id="monsterIconList" >
+        </ul>
+        
       </div>
 
       <div class="gridChild2" id="monsterCreationForm">
-        <form>
+        <form id="creationForm">
           <p class="createAdvice">Add your own creation to the list</p>
           <label for="name">Monster name:</label>
           <input type="text" id="name" name="name" placeholder="Name">
