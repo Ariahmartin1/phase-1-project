@@ -8,7 +8,7 @@
     <title>DnD Encounter Creator</title>
     <style>
       body {
-        background-image: url('https://www.teahub.io/photos/full/173-1734356_1920x1080-red-black-circular-gradient-destop-wallpaper-black.jpg');
+        background-image: url('https://t3.ftcdn.net/jpg/01/36/25/58/360_F_136255856_XGPHT6zyNJay48Dprr0bTVYb4XlUuSaI.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -68,6 +68,11 @@
       <div class="gridChild2" id="monsterCreationForm">
         <form id="creationForm">
           <p class="createAdvice">Add your own creation to the list</p>
+          <label for="image">Image:</label>
+          <input type="text" id="image" name="image" placeholder="Image URL">
+
+          <br>
+          
           <label for="name">Monster name:</label>
           <input type="text" id="name" name="name" placeholder="Name">
 
@@ -95,8 +100,8 @@
 
           <br>
 
-          <label for="Name">Monster hit points:</label>
-          <input type="number" id="Name" name="Name" placeholder="HP">
+          <label for="HP">Monster hit points:</label>
+          <input type="number" id="HP" name="Name" placeholder="HP">
 
           <br>
 
@@ -113,6 +118,9 @@
 
       <div class= gridChild3 id="encounterList">
         <h2>My Encounter List</h2>
+        <div id="myEncounterList">
+
+        </div>
         <h3><strong>Total CR:</strong></h3>
       </div>
     </div>
