@@ -1,4 +1,7 @@
 
+body {
+background-color: black;
+}
 #header{
   border: 4px solid rgba(220, 20, 60, 0.705);
   background-color: black;
@@ -67,3 +70,4 @@ h3{
 ul {
   list-style: none;
 }
+
