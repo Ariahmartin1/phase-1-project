@@ -71,4 +71,3 @@ function renderOneMonsterIcon (monster) {
   })
   document.getElementById("monsterIconList").appendChild(icon)
 }
-
