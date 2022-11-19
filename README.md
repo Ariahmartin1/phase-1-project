@@ -15,6 +15,9 @@ Monsters added to the encounter list display:
 *Challenge rating is a number that indicates at what character level a monster becomes an appropriate challenge.*
 
 ## Usage
+This page's intended use is as a reference for dungeon masters to use when creating monster encounters for their players.
+
+To see an example video of its use, please visit <https://youtu.be/hUsT0WgNIoA>
 
 ## Roadmap
 
